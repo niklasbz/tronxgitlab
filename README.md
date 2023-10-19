@@ -24,10 +24,10 @@ Read before usage:
 2. `cd tronxgitlab`
 3. `pnpm install`
 4. `pnpm run build:extension`
-5. Open Chrome go to`chrome://extensions/`
+5. Open Chrome go to `chrome://extensions/`
 6. Enable dev mode
 7. Click `load unpacked`
-8. Select $project-root`/dist/tron-x-gitlab`
+8. Select $project-root `/dist/tron-x-gitlab`
 9. Follow usage instructions
 
 ### Installation (Chrome webstore)
@@ -47,7 +47,7 @@ pending
 1. Open Chrome go to `chrome://extensions/`
 2. Enable dev mode
 3. Press `Pack extension`
-4. Select $project-root`/dist/tron-x-gitlab` for "Extension root directory"
+4. Select $project-root `/dist/tron-x-gitlab` for "Extension root directory"
 5. If the extension is already published, select the generated private key file for "Private key file (optional)"
 6. Press `Pack extension`
 7. Go to and follow instructions at `https://chrome.google.com/webstore/devconsole/`
