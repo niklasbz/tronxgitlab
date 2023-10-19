@@ -22,8 +22,8 @@ Read before usage:
 
 1. `git clone https://github.com/niklasbz/tronxgitlab.git`
 2. `cd tronxgitlab`
-3. `yarn install`
-4. `ng build`
+3. `pnpm install`
+4. `pnpm run build:extension`
 5. Open Chrome go to`chrome://extensions/`
 6. Enable dev mode
 7. Click `load unpacked`
