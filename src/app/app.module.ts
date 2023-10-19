@@ -9,7 +9,6 @@ import { PluckPipe } from './pipes/pluck.pipe';
 import { JoinPipe } from './pipes/join.pipe';
 import { AsGitlabMergereqeustInterfacePipe } from './pipes/as-gitlab-mergereqeust-interface.pipe';
 import { MergeStatusComponent } from './components/merge-status/merge-status.component';
-import { YouPipe } from './pipes/you.pipe';
 import { PipelineStatusComponent } from './components/pipeline-status/pipeline-status.component';
 import { AsGitlabPipelineInterfacePipe } from './pipes/as-gitlab-pipeline-interface.pipe';
 
@@ -22,7 +21,6 @@ import { AsGitlabPipelineInterfacePipe } from './pipes/as-gitlab-pipeline-interf
     JoinPipe,
     AsGitlabMergereqeustInterfacePipe,
     MergeStatusComponent,
-    YouPipe,
     PipelineStatusComponent,
     AsGitlabPipelineInterfacePipe
   ],
