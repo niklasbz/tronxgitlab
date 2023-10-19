@@ -35,6 +35,7 @@ async function init(token, url)
   let div = document.createElement("tron-x-gitlab");
   div.setAttribute("mergerequest", JSON.stringify(mergeRequest));
   div.setAttribute("pipeline", JSON.stringify(pipeline));
+  div.setAttribute("version", chrome.runtime.getManifest().version);
   let main = document.getElementById('fieldset_default_mainFields');
   main.parentNode.insertBefore(div, main.nextSibling);
 }

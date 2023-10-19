@@ -3,7 +3,6 @@ import { GitlabMergereqeustInterface } from './interfaces/gitlab.mergereqeust.in
 import { faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { GitlabPipelineInterface } from './interfaces/gitlab.pipeline.interface';
-import packageJson from '../../package.json';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +15,12 @@ export class AppComponent implements OnInit
 {
   @Input() mergerequest: string | GitlabMergereqeustInterface | null = null;
   @Input() pipeline: string | GitlabPipelineInterface | null = null;
+  @Input() version: string | null = null;
 
   public gitlab = faGitlab;
   public angleUp = faAngleUp;
 
   public accordion: boolean = true;
-
-  public version: string = packageJson.version;
 
   public ngOnInit(): void
   {
