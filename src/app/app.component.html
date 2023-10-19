@@ -1,0 +1,77 @@
+<div class="w-full h-px bg-border-color"></div>
+<div class="p-4 pb-3 flex flex-col font-font-stack">
+  <div class="flex justify-between">
+    <div class="flex">
+      <span class="text-form-label-color text-title tracking-title whitespace-nowrap" [class]="accordion?'pb-4':'pb-0'">
+      <fa-icon [icon]="gitlab"></fa-icon>
+      &nbsp;Open Merge Request
+  </span>
+    </div>
+    <div class="flex">
+      <app-merge-status class="mr-4 text-form-label-color" [mergerequest]="(mergerequest|asGitlabMergereqeustInterface).detailed_merge_status"></app-merge-status>
+      <fa-icon (click)="accordion=!accordion" class="text-form-label-color hover:text-caret-color cursor-pointer leading-loose mr-1.5 transform-gpu transition-transform" [class]="accordion?'rotate-0':'rotate-180'" [icon]="angleUp"></fa-icon>
+    </div>
+  </div>
+
+  <section [class]="accordion ? 'h-auto' : 'h-0'" class="overflow-hidden">
+    <app-text-element
+      title="Title"
+      [text]="(mergerequest | asGitlabMergereqeustInterface).title"
+    ></app-text-element>
+
+    <div class="flex">
+      <app-text-element
+        class="flex-1 min-w-0 basis-1/2"
+        title="Source Branch"
+        [text]="(mergerequest | asGitlabMergereqeustInterface).source_branch"
+      ></app-text-element>
+      <app-text-element
+        class="flex-1 min-w-0 basis-1/2"
+        title="Target Branch"
+        [text]="(mergerequest | asGitlabMergereqeustInterface).target_branch"
+      ></app-text-element>
+    </div>
+
+    <div class="flex">
+      <app-text-element
+        class="flex-1"
+        title="Assignee"
+        [text]="((mergerequest | asGitlabMergereqeustInterface).assignee.name)"
+      ></app-text-element>
+      <app-text-element
+        class="flex-1"
+        title="Reviewer(s)"
+        [text]="((mergerequest | asGitlabMergereqeustInterface).reviewers | pluck: 'name') | join: ', '"
+      ></app-text-element>
+    </div>
+
+    <app-element title="Pipeline state">
+      <app-pipeline-status [pipeline]="(pipeline | asGitlabPipelineInterface).status"></app-pipeline-status>
+    </app-element>
+
+    <app-element title="View on Gitlab" [last]="true">
+      <div class="flex justify-between">
+        <div class="flex gap-6 text-link-color">
+          <a class="hover:underline"
+            [href]="(mergerequest|asGitlabMergereqeustInterface).web_url"
+            target="_blank">
+            Overview</a>
+          <a class="hover:underline"
+            [href]="(mergerequest|asGitlabMergereqeustInterface).web_url+'/commits'"
+            target="_blank">
+            Commits</a>
+          <a class="hover:underline"
+            [href]="(mergerequest|asGitlabMergereqeustInterface).web_url+'/pipelines'"
+            target="_blank">
+            Pipelines</a>
+          <a class="hover:underline"
+            [href]="(mergerequest|asGitlabMergereqeustInterface).web_url+'/diffs'"
+            target="_blank">
+            Changes</a>
+        </div>
+        <span class="text-form-label-color text-xs">v{{version}}&nbsp;❤</span>
+      </div>
+    </app-element>
+  </section>
+</div>
+

@@ -1,0 +1,38 @@
+{
+  "name": "TronXGitlab",
+  "version": "0.1.1",
+  "description": "Adds a Gitlab Widget to Tron Tickets",
+  "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/bcs/ticketdetail/main/*"
+      ],
+      "js": [
+        "insert.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "main.js",
+        "polyfills.js",
+        "runtime.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}

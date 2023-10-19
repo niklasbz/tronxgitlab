@@ -1,0 +1,12 @@
+<app-element title="{{title}}">
+  <span class="text-color text-text truncate pr-4">
+    <ng-template
+      [ngIf]="text && text?.length>0"
+      [ngIfElse]="noContent">
+      {{ text }}
+      </ng-template>
+  </span>
+  <ng-template #noContent>
+    {{noContent}}
+  </ng-template>
+</app-element>
