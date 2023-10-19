@@ -9,7 +9,7 @@ import { faBug, faCircleCheck, faCircleXmark, faComment, faGear, faPenRuler, Ico
 })
 export class MergeStatusComponent
 {
-  @Input() mergerequest: GitlabMergestatusType = 'broken_status';
+  @Input() mergerequest: GitlabMergestatusType | null = 'broken_status';
 
   public textMap: Record<string, string> = {
     'mergeable': 'Mergeable',

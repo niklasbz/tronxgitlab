@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./element.component.css']
 })
 export class ElementComponent {
-  @Input() title: string = '';
+  @Input() title: string | null = '';
   @Input() last: boolean = false;
 }

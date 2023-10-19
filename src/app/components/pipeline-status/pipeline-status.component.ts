@@ -19,7 +19,7 @@ import {
 })
 export class PipelineStatusComponent
 {
-  @Input() pipeline: GitlabPipelinestatusType = 'created';
+  @Input() pipeline: GitlabPipelinestatusType | null = 'created';
 
   public textMap: Record<string, string> = {
     'created': 'Created',

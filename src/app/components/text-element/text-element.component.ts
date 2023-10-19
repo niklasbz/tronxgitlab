@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TextElementComponent
 {
-  @Input() title: string = '';
-  @Input() text: string = '';
-  @Input() noContent: string = '-';
+  @Input() title: string | null = '';
+  @Input() text: string | null = '';
+  @Input() noContent: string | null = '-';
 }

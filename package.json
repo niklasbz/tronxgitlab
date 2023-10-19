@@ -2,6 +2,7 @@
   "name": "tron-x-gitlab",
   "version": "1.0.0",
   "scripts": {
+    "ng": "ng",
     "build:extension": "ng build"
   },
   "private": true,
